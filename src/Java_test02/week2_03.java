@@ -21,15 +21,27 @@ public class week2_03 {
         String inputdata = data.nextLine();
         save = inputdata.split(" ");
 
-
+        System.out.println(Arrays.toString(save));
 
     }
 
-    public static  void option2(){
+    public static  void option2(String[] save){
         //2번 선택 : 이름, 전화번호 입력
+        Scanner data = new Scanner(System.in);
+
+        System.out.println("이름 전화번호를 입력하세요");
+        String inputdata = data.nextLine();
+        save = inputdata.split(" ");
     }
 
+    public static void option3(String[] save){
+        //3번 선택 : 이름 입력
+        Scanner data = new Scanner(System.in);
 
+        System.out.println("이름을 입력하세요");
+        String inputdata = data.nextLine();
+        save = inputdata.split(" ");
+    }
 
     public static void main(String[] args) {
         //래그드 배열 활용
@@ -42,15 +54,17 @@ public class week2_03 {
         reggedArray = new String[5][];
 
         for(int i = 0; i < 5; i++){
-            System.out.println(i +"번째 정보를 입력하세요");
+            System.out.println((i+1) +"번째 정보를 입력하세요");
             if(answer == 1){
                 reggedArray[i] = new String[3];
                 option1(reggedArray[i]);
             }
             else if(answer == 2){
-                option2();
+                reggedArray[i] = new String[2];
+                option2(reggedArray[i]);
             }
-            else{
+            else if(answer == 3){
+                reggedArray[i] = new String[1];
 
             }
         }
