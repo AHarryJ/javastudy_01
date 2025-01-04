@@ -1,0 +1,20 @@
+package week3;
+
+public class Person {
+    int age;
+    int height;
+    public String say_hi(){
+        return "hi";
+    }
+
+    public static void main(String[] args) {
+        Person person = new Person();
+        person.age= 20;
+        person.height = 180;
+        person.say_hi();
+
+        System.out.println(person.age);
+        System.out.println(person.height);
+        System.out.println(person.say_hi());
+    }
+}
